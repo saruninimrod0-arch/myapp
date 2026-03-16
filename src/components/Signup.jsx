@@ -33,7 +33,7 @@ const handleSubmit = async(e) =>{
     formdata.append("phone", phone);
 
     // by use of axios, we can access the method post
-    const response =await axios.post("https://saruninimrod..alwaysdata.net/api/signup", formdata)
+    const response =await axios.post("https://saruninimrod.alwaysdata.net/api/signup", formdata)
 
     // set back the loading to default
     setLoading("");
@@ -46,6 +46,10 @@ const handleSubmit = async(e) =>{
     setEmail("");
     setPassword("")
     setPhone("");
+
+     setTimeout(() => {
+    setSuccess("");
+  }, 5000);
   }
   catch(error){
     // set the loading back to default
