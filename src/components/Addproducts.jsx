@@ -47,6 +47,11 @@ const Addproducts = () => {
       setProductCost("");
       setProductPhoto("");
 
+      e.target.reset()
+      setTimeout(() => {
+        setSuccess("");
+      }, 5000);
+
     }
     catch(error){
       // set loading hook to default
